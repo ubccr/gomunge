@@ -29,17 +29,17 @@ import (
 
 func main() {
     // Encode default cred
-	b64, err := munge.Encode()
+    b64, err := munge.Encode()
 
     // Encode cred with options
-	b64, err := munge.NewCredential(munge.WithPayload(payload), munge.WithTTL(800))
+    b64, err := munge.NewCredential(munge.WithPayload(payload), munge.WithTTL(800))
 	
     // Use b64 in some transport
 
     // Decode cred
-	cred, err := munge.Decode(b64)
+    cred, err := munge.Decode(b64)
 
-	fmt.printf("%s\n", cred.UidString())
+    fmt.printf("%s\n", cred.UidString())
 }
 ```
 
