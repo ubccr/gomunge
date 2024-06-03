@@ -22,7 +22,6 @@ package munge
 #cgo CFLAGS: -std=gnu99
 #cgo LDFLAGS: -lmunge
 #include "gmunge.h"
-#include <stdint.h>
 */
 import "C"
 
