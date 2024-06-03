@@ -32,7 +32,8 @@ func main() {
     b64, err := munge.Encode()
 
     // Encode cred with options
-    b64, err := munge.NewCredential(munge.WithPayload(payload), munge.WithTTL(800))
+    cred := munge.NewCredential(munge.WithPayload(payload), munge.WithTTL(800))
+    b64, err := cred.Encode()
 	
     // Use b64 in some transport
 
